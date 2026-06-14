@@ -10,8 +10,8 @@
             --accent-color: #c5a059; 
             --text-color: #2c3e50;
             --light-bg: #f4f7f5;
-            /* Перепроверенный и закодированный чеченский золотой орнамент (работает везде) */
-            --ornament-url: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDMwIDE1Ij48cGF0aCBkPSJMMCw3LjUgUTcuNSwwIDE1LDcuNSBRMjIuNSwxNSAzMCw3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M1YTA1OSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSIxNSIgY3k9IjcuNSIgcj0iMiIgZmlsbD0iI2M1YTA1OSIvPjwvc3ZnPg==');
+            /* Прямая ссылка на готовый чеченский орнамент из интернета */
+            --ornament-url: url('https://ibb.co');
         }
 
         * {
@@ -36,10 +36,10 @@
         }
 
         .header-border {
-            height: 12px;
+            height: 16px;
             background-image: var(--ornament-url);
             background-repeat: repeat-x;
-            background-size: contain;
+            background-size: auto 16px;
             background-color: var(--primary-color);
         }
 
@@ -114,11 +114,12 @@
             font-style: italic;
             font-size: 1.15rem;
             color: var(--primary-color);
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             line-height: 1.7;
             position: relative;
             padding: 0 20px;
+            font-weight: 500;
         }
 
         .hero {
@@ -158,10 +159,10 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0;
-            height: 12px;
+            height: 16px;
             background-image: var(--ornament-url);
             background-repeat: repeat-x;
-            background-size: contain;
+            background-size: auto 16px;
             border-radius: 8px 8px 0 0;
         }
 
@@ -169,7 +170,7 @@
             color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.6rem;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
         /* Карточки с орнаментом */
@@ -190,17 +191,17 @@
             transition: transform 0.3s, box-shadow 0.3s;
             position: relative;
             border: 1px solid #e2e8f0;
-            padding-top: 35px;
+            padding-top: 40px;
         }
 
         .card::before {
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0;
-            height: 12px;
+            height: 16px;
             background-image: var(--ornament-url);
             background-repeat: repeat-x;
-            background-size: contain;
+            background-size: auto 16px;
             border-radius: 8px 8px 0 0;
         }
 
@@ -244,10 +245,10 @@
         }
 
         .slot-ornament {
-            height: 12px;
+            height: 16px;
             background-image: var(--ornament-url);
             background-repeat: repeat-x;
-            background-size: contain;
+            background-size: auto 16px;
             background-color: var(--primary-color);
         }
 
@@ -286,7 +287,7 @@
 
     <header>
         <nav>
-            <div class="logo">ХАВА АСЛАМБЕКОВНА ШАИPОВА</div>
+            <div class="logo">ХАВА АСЛАМБЕКОВНА ШАИПОВА</div>
             <ul class="nav-links">
                 <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
                 <li><a onclick="showPage('prof')" id="link-prof">Профессиональная деятельность</a></li>
@@ -307,10 +308,15 @@
                 Министр образования и науки Молодежного Правительства Чеченской Республики.<br>
                 Учитель родного языка и литературы, Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ № 9 им. А.М. Цебиева» г. Грозного.
             </p>
-            <!-- Новая официальная цитата -->
             <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
         </div>
 
         <!-- БЛОК О СЕБЕ -->
         <div class="about-section">
             <h2>О себе</h2>
+            <p>Здесь вы можете разместить подробную биографическую справку, информацию о жизненном и профессиональном пути, педагогическом стаже, ключевых целях в преподавании родного языка и общественной работе. Текст легко заменить через встроенный редактор на GitHub в этом блоке.</p>
+        </div>
+
+        <div class="grid-menu">
+            <div class="card" onclick="showPage('prof')">
+                <h3>Профессиональная деятельность</h3>
