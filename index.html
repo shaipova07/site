@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Официальный сайт | Портфолио</title>
+    <style>
+        :root {
+            --primary-color: #0b462c; 
+            --accent-color: #c5a059; 
+            --text-color: #2c3e50;
+            --light-bg: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .page {
+            display: none;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .page.active-page {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin: 25px 0 15px 0;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #f4f7f5 0%, #e9f0ec 100%);
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+            cursor: pointer;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-color);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .poem-block {
+            background: var(--light-bg);
+            padding: 30px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            white-space: pre-line;
+            margin-bottom: 25px;
+        }
+
+        .article-card, .event-card {
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--primary-color);
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-top: 80px;
+            border-top: 3px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">ОФИЦИАЛЬНЫЙ САЙТ</div>
+            <ul class="nav-links">
+                <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
+                <li><a onclick="showPage('prof')" id="link-prof">Профессиональная деятельность</a></li>
+                <li><a onclick="showPage('science')" id="link-science">Научная деятельность</a></li>
+                <li><a onclick="showPage('gov')" id="link-gov">Молодежное Правительство ЧР</a></li>
+                <li><a onclick="showPage('poetry')" id="link-poetry">Моя поэзия</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="page-home" class="page active-page">
+        <div class="hero">
+            <h1>Имя Отчество Фамилия</h1>
+            <p class="subtitle">Учитель родного (чеченского) языка и литературы. <br>Министр образования и науки Молодежного Правительства Чеченской Республики.</p>
+            <p>Добро пожаловать на официальный информационный ресурс. Здесь вы можете подробно ознакомиться с профессиональными достижениями, научными публикациями, деятельностью в составе Молодежного Правительства ЧР, а также авторским творчеством.</p>
+        </div>
+
+        <div class="grid-menu">
+            <div class="card" onclick="showPage('prof')">
+                <h3>Профессиональная деятельность</h3>
+                <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
+            </div>
+            <div class="card" onclick="showPage('science')">
+                <h3>Научная деятельность</h3>
+                <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
+            </div>
+            <div class="card" onclick="showPage('gov')">
+                <h3>Молодежное Правительство ЧР</h3>
+                <p>Проекты министерства, молодежные инициативы и официальные мероприятия.</p>
+            </div>
+            <div class="card" onclick="showPage('poetry')">
+                <h3>Моя поэзия</h3>
+                <p>Творческая страница: авторские стихотворения и литературные работы.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-prof" class="page">
+        <h1>Профессиональная деятельность</h1>
+        <p class="subtitle">Педагогическое кредо и достижения в сфере образования</p>
+        <div class="article-card">
+            <h3>Опыт преподавания и методика</h3>
+            <p>Здесь будет размещен текст о педагогическом стаже, применяемых на уроках технологиях обучения чеченскому языку и литературе, а также о целях и ценностях преподавательской работы.</p>
+        </div>
+    </div>
+
+    <div id="page-science" class="page">
+        <h1>Научная деятельность</h1>
+        <p class="subtitle">Научные публикации, статьи и методические разработки</p>
+        <div class="article-card">
+            <div class="date">Публикация</div>
+            <h3>Название научной статьи или доклада</h3>
+            <p>Краткая аннотация статьи, посвященной вопросам филологии, развитию родной речи или инновациям в преподавании литературы.</p>
+        </div>
+    </div>
+
+    <div id="page-gov" class="page">
+        <h1>Молодежное Правительство ЧР</h1>
+        <p class="subtitle">Министерство образования и науки: проекты и инициативы</p>
+        <div class="event-card">
+            <div class="date">Текущая деятельность</div>
+            <h3>Развитие молодежной науки и образования</h3>
+            <p>Информация о реализуемых министерством проектах, участии в заседаниях, форумах и работе по поддержке талантливых молодых исследователей и педагогов республики.</p>
+        </div>
+    </div>
+
+    <div id="page-poetry" class="page">
+        <h1>Моя поэзия</h1>
+        <p class="subtitle">Литературное творчество и авторские стихотворения</p>
+        <div class="poem-block">
+            <strong>Название стихотворения</strong>
+            Здесь будет расположен текст первого авторского стихотворения.
+            Строка за строкой, с сохранением оригинального
+            авторского форматирования и ритма.
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Все права защищены. Официальный сайт.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active-page'));
+
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => link.classList.remove('active'));
+
+            document.getElementById('page-' + pageId).classList.add('active-page');
+            document.getElementById('link-' + pageId).classList.add('active');
+
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
