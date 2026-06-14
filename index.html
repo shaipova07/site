@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Официальный сайт | Портфолио</title>
+    <title>Официальный сайт | Х. А. Шаипова</title>
     <style>
         :root {
             --primary-color: #0b462c; 
             --accent-color: #c5a059; 
             --text-color: #2c3e50;
-            --light-bg: #f8f9fa;
+            --light-bg: #f4f7f5;
+            /* Ссылка на чеченский золотой орнамент для границ */
+            --ornament-url: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="30" height="15" viewBox="0 0 30 15"><path d="M0,7.5 Q7.5,0 15,7.5 Q22.5,15 30,7.5" fill="none" stroke="%23c5a059" stroke-width="2.5"/><circle cx="15" cy="7.5" r="2" fill="%23c5a059"/></svg>');
         }
 
         * {
@@ -25,12 +27,20 @@
             background-color: #ffffff;
         }
 
+        /* Шапка с орнаментом */
         header {
             background-color: var(--primary-color);
-            border-bottom: 3px solid var(--accent-color);
             position: sticky;
             top: 0;
             z-index: 1000;
+        }
+
+        .header-border {
+            height: 12px;
+            background-image: var(--ornament-url);
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-color: var(--primary-color);
         }
 
         nav {
@@ -44,7 +54,7 @@
 
         .logo {
             color: #ffffff;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
             letter-spacing: 1px;
         }
@@ -96,7 +106,7 @@
         .subtitle {
             color: #7f8c8d;
             font-size: 1.1rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             font-style: italic;
         }
 
@@ -105,26 +115,55 @@
             padding: 40px 20px;
             background: linear-gradient(135deg, #f4f7f5 0%, #e9f0ec 100%);
             border-radius: 8px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
         .main-photo {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
+            width: 240px;
+            height: 300px; /* Скорректировано под пропорции нового фото */
+            border-radius: 12px; /* Прямоугольная аккуратная форма с закруглением */
             object-fit: cover;
             border: 4px solid var(--accent-color);
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
+        /* Блок О себе */
+        .about-section {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .about-section::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 8px;
+            background-image: var(--ornament-url);
+            background-repeat: repeat-x;
+            background-size: contain;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .about-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        /* Карточки с орнаментом */
         .grid-menu {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            gap: 24px;
             margin-top: 30px;
             width: 100%;
         }
@@ -132,16 +171,29 @@
         .card {
             background: #ffffff;
             padding: 25px;
-            border-radius: 6px;
+            border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary-color);
             cursor: pointer;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            border: 1px solid #e2e8f0;
+            padding-top: 35px;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 8px;
+            background-image: var(--ornament-url);
+            background-repeat: repeat-x;
+            background-size: contain;
+            border-radius: 8px 8px 0 0;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            border-top-color: var(--accent-color);
+            box-shadow: 0 8px 25px rgba(11, 70, 44, 0.15);
         }
 
         .card h3 {
@@ -156,6 +208,7 @@
             margin-top: 20px;
         }
 
+        /* Слоты с орнаментом */
         .slot-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -163,6 +216,7 @@
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.02);
             transition: transform 0.3s;
+            position: relative;
         }
 
         .slot-card:hover {
@@ -173,8 +227,15 @@
             width: 100%;
             height: 190px;
             object-fit: cover;
-            border-bottom: 3px solid var(--accent-color);
             background-color: #eaedf0;
+        }
+
+        .slot-ornament {
+            height: 8px;
+            background-image: var(--ornament-url);
+            background-repeat: repeat-x;
+            background-size: contain;
+            background-color: var(--primary-color);
         }
 
         .slot-content {
@@ -205,7 +266,6 @@
             color: #ffffff;
             font-size: 0.9rem;
             margin-top: 80px;
-            border-top: 3px solid var(--accent-color);
         }
     </style>
 </head>
@@ -213,7 +273,7 @@
 
     <header>
         <nav>
-            <div class="logo">ОФИЦИАЛЬНЫЙ САЙТ</div>
+            <div class="logo">ХАВА АСЛАМБЕКОВНА ШАИПОВА</div>
             <ul class="nav-links">
                 <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
                 <li><a onclick="showPage('prof')" id="link-prof">Профессиональная деятельность</a></li>
@@ -222,89 +282,27 @@
                 <li><a onclick="showPage('poetry')" id="link-poetry">Моя поэзия</a></li>
             </ul>
         </nav>
+        <div class="header-border"></div>
     </header>
 
     <!-- ГЛАВНАЯ СТРАНИЦА -->
     <div id="page-home" class="page active-page">
         <div class="hero">
-            <img src="ССЫЛКА_НА_ГЛАВНОЕ_ФОТО" alt="Фотография" class="main-photo">
-            <h1> Шаипова Хава Асламбековна</h1>
-            <p class="subtitle">Учитель родного (чеченского) языка и литературы. <br>Министр образования и науки Молодежного Правительства Чеченской Республики.</p>
-            <p>Добро пожаловать на official информационный ресурс. Здесь вы можете подробно ознакомиться с профессиональными достижениями, научными публикациями, деятельностью в составе Молодежного Правительства ЧР, а также авторским творчеством.</p>
+            <img src="https://sun9-4.userapi.com/s/v1/ig2/v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg?quality=95&as=32x40,48x60,72x90,108x135,160x200,240x300,360x450,480x600,540x675,640x800,720x900,1080x1350,1280x1600,1440x1800,2048x2560&from=bu&u=7Vtb99uU7xdbgf8gG7ui_6MMFmh5RpzYs2mMMtzx0n8&cs=2048x0" alt="Хава Асламбековна Шаипова" class="main-photo">
+            <h1>Шаипова Хава Асламбековна</h1>
+            <p class="subtitle">
+                Министр образования и науки Молодежного Правительства Чеченской Республики.<br>
+                Учитель родного языка и литературы, Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ № 9 им. А.М. Цебиева» г. Грозного.
+            </p>
+            <p>Добро пожаловать на официальный информационный ресурс. Здесь вы можете подробно ознакомиться с профессиональными достижениями, научными публикациями, деятельностью в составе Молодежного Правительства ЧР, а также авторским творчеством.</p>
+        </div>
+
+        <!-- БЛОК О СЕБЕ -->
+        <div class="about-section">
+            <h2>О себе</h2>
+            <p>Здесь вы можете разместить подробную биографическую справку, информацию о жизненном и профессиональном пути, педагогическом стаже, ключевых целях в преподавании родного языка и общественной работе. Текст легко заменить через встроенный редактор на GitHub в этом блоке.</p>
         </div>
 
         <div class="grid-menu">
             <div class="card" onclick="showPage('prof')">
                 <h3>Профессиональная деятельность</h3>
-                <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
-            </div>
-            <div class="card" onclick="showPage('science')">
-                <h3>Научная деятельность</h3>
-                <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
-            </div>
-            <div class="card" onclick="showPage('gov')">
-                <h3>Молодежное Правительство ЧР</h3>
-                <p>Проекты министерства, молодежные инициативы и официальные мероприятия.</p>
-            </div>
-            <div class="card" onclick="showPage('poetry')">
-                <h3>Моя поэзия</h3>
-                <p>Творческая страница: авторские стихотворения и литературные работы.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ПРОФЕССИОНАЛЬНАЯ ДЕЯТЕЛЬНОСТЬ (50 СЛОТОВ) -->
-    <div id="page-prof" class="page">
-        <h1>Профессиональная деятельность</h1>
-        <p class="subtitle">Педагогические достижения, открытые уроки и опыт работы</p>
-        <div class="slots-grid" id="prof-container"></div>
-    </div>
-
-    <!-- НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ (50 СЛОТОВ) -->
-    <div id="page-science" class="page">
-        <h1>Научная деятельность</h1>
-        <p class="subtitle">Научные публикации, исследования, доклады и статьи</p>
-        <div class="slots-grid" id="science-container"></div>
-    </div>
-
-    <!-- МОЛОДЕЖНОЕ ПРАВИТЕЛЬСТВО ЧР (50 СЛОТОВ) -->
-    <div id="page-gov" class="page">
-        <h1>Молодежное Правительство ЧР</h1>
-        <p class="subtitle">Министерство образования и науки: официальные мероприятия и проекты</p>
-        <div class="slots-grid" id="gov-container"></div>
-    </div>
-
-    <!-- МОЯ ПОЭЗИЯ -->
-    <div id="page-poetry" class="page">
-        <h1>Моя поэзия</h1>
-        <p class="subtitle">Литературное творчество и авторские стихотворения</p>
-        <div class="poem-block">
-            <strong>Название стихотворения</strong>
-            Здесь будет расположен текст первого авторского стихотворения.
-            Строка за строкой, с сохранением оригинального
-            авторского форматирования и ритма.
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2026 Все права защищены. Официальный сайт.</p>
-    </footer>
-
-    <script>
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.classList.remove('active-page'));
-
-            const links = document.querySelectorAll('.nav-links a');
-            links.forEach(link => link.classList.remove('active'));
-
-            document.getElementById('page-' + pageId).classList.add('active-page');
-            document.getElementById('link-' + pageId).classList.add('active');
-
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-
-        // Данные для ручного заполнения слотов (замените здесь на свои данные)
-        const customData = {
-            prof: {
-                // Пример заполнения слота №1 в Проф. деятельности:
