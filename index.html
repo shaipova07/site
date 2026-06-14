@@ -167,13 +167,14 @@
             font-size: 1.6rem;
         }
 
-        /* Исправленная жесткая сетка карточек, которая не ломает описания */
+        /* Полностью переписанная и исправленная сетка карточек (Flexbox) */
         .grid-menu {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 20px;
             margin-top: 30px;
             width: 100%;
+            justify-content: center;
         }
 
         .card {
@@ -185,7 +186,10 @@
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e2e8f0;
             border-top: 6px solid var(--accent-color);
-            min-height: 160px;
+            width: calc(33.333% - 14px); 
+            min-width: 280px; 
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
@@ -272,7 +276,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <nav>
             <div class="logo">ОФИЦИАЛЬНЫЙ САЙТ</div>
