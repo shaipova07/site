@@ -10,7 +10,7 @@
             --accent-color: #c5a059; 
             --text-color: #2c3e50;
             --light-bg: #f4f7f5;
-            /* Прямая ссылка на готовый чеченский орнамент из интернета */
+            /* Готовый чеченский орнамент картинкой из интернета */
             --ornament-url: url('https://ibb.co');
         }
 
@@ -27,7 +27,6 @@
             background-color: #ffffff;
         }
 
-        /* Шапка с орнаментом */
         header {
             background-color: var(--primary-color);
             position: sticky;
@@ -144,7 +143,6 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
 
-        /* Блок О себе */
         .about-section {
             background: #ffffff;
             padding: 35px;
@@ -173,7 +171,6 @@
             margin-top: 15px;
         }
 
-        /* Карточки с орнаментом */
         .grid-menu {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -222,7 +219,6 @@
             margin-top: 20px;
         }
 
-        /* Слоты с орнаментом */
         .slot-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
@@ -299,7 +295,6 @@
         <div class="header-border"></div>
     </header>
 
-    <!-- ГЛАВНАЯ СТРАНИЦА -->
     <div id="page-home" class="page active-page">
         <div class="hero">
             <img src="https://userapi.com" alt="Хава Асламбековна Шаипова" class="main-photo">
@@ -311,12 +306,15 @@
             <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
         </div>
 
-        <!-- БЛОК О СЕБЕ -->
         <div class="about-section">
             <h2>О себе</h2>
-            <p>Здесь вы можете разместить подробную биографическую справку, информацию о жизненном и профессиональном пути, педагогическом стаже, ключевых целях в преподавании родного языка и общественной работе. Текст легко заменить через встроенный редактор на GitHub в этом блоке.</p>
+            <p> </p>
         </div>
 
         <div class="grid-menu">
             <div class="card" onclick="showPage('prof')">
                 <h3>Профессиональная деятельность</h3>
+                <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка </p>
+            </div>
+            <div class="card" onclick="showPage('science')">
+                <h3>Научная деятельность</h3>
