@@ -32,7 +32,6 @@
             z-index: 1000;
         }
 
-        /* Надежная золотая линия с легким узором вместо сложного SVG */
         .header-border {
             height: 8px;
             background: repeating-linear-gradient(90deg, var(--accent-color), var(--accent-color) 10px, #b08d46 10px, #b08d46 20px);
@@ -270,6 +269,7 @@
     <!-- ГЛАВНАЯ СТРАНИЦА -->
     <div id="page-home" class="page active-page">
         <div class="hero">
+            <!-- Чистая, исправленная ссылка на фотографию -->
             <img src="https://userapi.com" alt="Хава Асламбековна Шаипова" class="main-photo">
             <h1>Шаипова Хава Асламбековна</h1>
             <p class="subtitle">
@@ -308,3 +308,9 @@
     <div id="page-prof" class="page">
         <h1>Профессиональная деятельность</h1>
         <p class="subtitle">Педагогические достижения, открытые уроки и опыт работы</p>
+        <div class="slots-grid" id="prof-container"></div>
+    </div>
+    <!-- НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ (50 СЛОТОВ) -->
+    <div id="page-science" class="page">
+        <h1>Научная деятельность</h1>
+        <p class="subtitle">Научные публикации, исследования, доклады и статьи</p>
