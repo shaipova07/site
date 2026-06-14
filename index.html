@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Официальный сайт | Х. А. Шаипова</title>
+    <title>Официальный сайт | Шаипова Хава Асламбековна</title>
+    
+    <!-- Настройки для поисковиков Яндекс и Google (SEO) -->
+    <meta name="description" content="Официальный сайт Шаиповой Хавы Асламбековны — Министра образования и науки Молодежного Правительства Чеченской Республики, руководителя методобъединения и учителя чеченского языка.">
+    <meta name="keywords" content="Шаипова Хава Асламбековна, Хава Шаипова, Молодежное Правительство ЧР, министр образования, СОШ 9 Грозный, учитель чеченского языка, Шаипова Грозный, руководитель театрального кружка">
+    
     <style>
         :root {
             --primary-color: #0b462c; 
@@ -45,6 +50,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .logo {
@@ -52,21 +59,24 @@
             font-size: 1.1rem;
             font-weight: bold;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
             color: #e0e0e0;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 500;
             transition: color 0.3s;
             cursor: pointer;
+            white-space: nowrap;
         }
 
         .nav-links a:hover, .nav-links a.active {
@@ -260,7 +270,7 @@
 
     <header>
         <nav>
-            <div class="logo">ХАВА АСЛАМБЕКОВНА ШАИПОВА</div>
+            <div class="logo">ОФИЦИАЛЬНЫЙ САЙТ</div>
             <ul class="nav-links">
                 <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
                 <li><a onclick="showPage('about-page')" id="link-about-page">О себе</a></li>
@@ -276,12 +286,11 @@
     <!-- ГЛАВНАЯ СТРАНИЦА -->
     <div id="page-home" class="page active-page">
         <div class="hero">
-            <!-- Точная внутренняя ссылка на загруженный вами файл фотографии Хавы Асламбековны -->
             <img src="v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg" alt="Хава Асламбековна Шаипова" class="main-photo">
             <h1>Шаипова Хава Асламбековна</h1>
             <p class="subtitle">
                 Министр образования и науки Молодежного Правительства Чеченской Республики.<br>
-                Учитель родного языка и литературы, Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ № 9 им. А.М. Цебиева» г. Грозного.
+                Учитель родного (чеченского) языка и литературы. Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ № 9 им. А.М. Цебиева» г. Грозного. Руководитель театрального кружка.
             </p>
             <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
         </div>
@@ -293,26 +302,11 @@
             </div>
             <div class="card" onclick="showPage('prof')">
                 <h3>Профессиональная деятельность</h3>
-                <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка </p>
+                <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
             </div>
             <div class="card" onclick="showPage('science')">
                 <h3>Научная деятельность</h3>
-                <p>Исследования, статьи, доклады и научно-методические публикации автора </p>
+                <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
             </div>
             <div class="card" onclick="showPage('gov')">
                 <h3>Молодежное Правительство ЧР</h3>
-                <p>Проекты, молодежные инициативы и официальные мероприятия </p>
-            </div>
-            <div class="card" onclick="showPage('poetry')">
-                <h3>Моя поэзия</h3>
-                <p>Творческая страница: авторские стихотворения и литературные работы </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ОТДЕЛЬНАЯ СТРАНИЦА О СЕБЕ -->
-    <div id="page-about-page" class="page">
-        <h1>О себе</h1>
-        <p class="subtitle">Личная и профессиональная биография</p>
-        <div class="about-section">
-            <h2>Биография и ценности</h2>
