@@ -10,7 +10,7 @@
             --accent-color: #c5a059; 
             --text-color: #2c3e50;
             --light-bg: #f4f7f5;
-            /* Ссылка на чеченский золотой орнамент для границ */
+            /* Код чеченского золотого орнамента */
             --ornament-url: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="30" height="15" viewBox="0 0 30 15"><path d="M0,7.5 Q7.5,0 15,7.5 Q22.5,15 30,7.5" fill="none" stroke="%23c5a059" stroke-width="2.5"/><circle cx="15" cy="7.5" r="2" fill="%23c5a059"/></svg>');
         }
 
@@ -122,10 +122,11 @@
         }
 
         .main-photo {
-            width: 240px;
-            height: 300px; /* Скорректировано под пропорции нового фото */
-            border-radius: 12px; /* Прямоугольная аккуратная форма с закруглением */
+            width: 250px;
+            height: 250px; 
+            border-radius: 50%; 
             object-fit: cover;
+            object-position: top; /* Фокусирует кадр на лице и обрезает фото на уровне талии */
             border: 4px solid var(--accent-color);
             margin-bottom: 25px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -146,7 +147,7 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0;
-            height: 8px;
+            height: 12px;
             background-image: var(--ornament-url);
             background-repeat: repeat-x;
             background-size: contain;
@@ -157,6 +158,7 @@
             color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.6rem;
+            margin-top: 10px;
         }
 
         /* Карточки с орнаментом */
@@ -184,7 +186,7 @@
             content: "";
             position: absolute;
             top: 0; left: 0; right: 0;
-            height: 8px;
+            height: 12px;
             background-image: var(--ornament-url);
             background-repeat: repeat-x;
             background-size: contain;
@@ -231,7 +233,7 @@
         }
 
         .slot-ornament {
-            height: 8px;
+            height: 12px;
             background-image: var(--ornament-url);
             background-repeat: repeat-x;
             background-size: contain;
@@ -288,7 +290,7 @@
     <!-- ГЛАВНАЯ СТРАНИЦА -->
     <div id="page-home" class="page active-page">
         <div class="hero">
-            <img src="https://sun9-4.userapi.com/s/v1/ig2/v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg?quality=95&as=32x40,48x60,72x90,108x135,160x200,240x300,360x450,480x600,540x675,640x800,720x900,1080x1350,1280x1600,1440x1800,2048x2560&from=bu&u=7Vtb99uU7xdbgf8gG7ui_6MMFmh5RpzYs2mMMtzx0n8&cs=2048x0" alt="Хава Асламбековна Шаипова" class="main-photo">
+            <img src="https://userapi.com" alt="Хава Асламбековна Шаипова" class="main-photo">
             <h1>Шаипова Хава Асламбековна</h1>
             <p class="subtitle">
                 Министр образования и науки Молодежного Правительства Чеченской Республики.<br>
