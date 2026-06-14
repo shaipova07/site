@@ -161,14 +161,13 @@
             font-size: 1.6rem;
         }
 
-               /* Квадратная сетка карточек с выравниванием по центру */
+            /* Стильные прямоугольные карточки во всю ширину экрана */
         .grid-menu {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             gap: 20px;
             margin-top: 30px;
             width: 100%;
-            justify-content: center; /* Центрирует карточки нижнего ряда */
         }
 
         .card {
@@ -179,12 +178,17 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e2e8f0;
-            border-top: 6px solid var(--accent-color);
-            width: calc(33.333% - 14px); /* Задает идеальный квадратный размер в 3 колонки */
-            min-width: 280px; /* Безопасный перенос на смартфонах */
-            min-height: 180px; 
+            border-top: 6px solid var(--accent-color); /* Золотая полоса строго сверху прямоугольника */
+            width: 100%; /* Растягивает карточку в прямоугольник */
+            min-height: 120px; /* Аккуратная высота для прямоугольной формы */
             display: flex;
             flex-direction: column;
+            justify-content: center;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(11, 70, 44, 0.1);
         }
 
         }
