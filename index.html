@@ -167,9 +167,10 @@
             font-size: 1.6rem;
         }
 
+        /* Исправленная жесткая сетка карточек, которая не ломает описания */
         .grid-menu {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin-top: 30px;
             width: 100%;
@@ -177,14 +178,14 @@
 
         .card {
             background: #ffffff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
             border: 1px solid #e2e8f0;
             border-top: 6px solid var(--accent-color);
+            min-height: 160px;
         }
 
         .card:hover {
@@ -195,12 +196,14 @@
         .card h3 {
             color: var(--primary-color);
             margin-bottom: 10px;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         .card p {
-            font-size: 0.9rem;
-            color: #555;
+            font-size: 0.95rem;
+            color: #555555;
+            line-height: 1.5;
         }
 
         .slots-grid {
@@ -289,7 +292,6 @@
         <div class="hero">
             <img src="v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg" alt="Хава Асламбековна Шаипова" class="main-photo">
             <h1>Шаипова Хава Асламбековна</h1>
-            <!-- Список регалий без лишних пробелов -->
             <p class="subtitle">
                 Министр образования и науки Молодёжного Правительства Чеченской Республики.<br>
                 Учитель чеченского языка и литературы.<br>
@@ -300,16 +302,26 @@
         </div>
 
         <div class="grid-menu">
-            <!-- 1. Карточка О себе на первом месте -->
+            <!-- 1. Карточка О себе -->
             <div class="card" onclick="showPage('about-page')">
                 <h3>О себе</h3>
-                <p>Биография, профессиональные ценности, жизненный и карьерный путь</p>
+                <p>Биография, профессиональные ценности, жизненный и карьерный путь.</p>
             </div>
             <!-- 2. Профессиональная деятельность -->
             <div class="card" onclick="showPage('prof')">
                 <h3>Профессиональная деятельность</h3>
                 <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
             </div>
-            <!-- 3. Научная деятельность -->
-            <div class="card" onclick="showPage('science')">
-                <h3>Научная деятельность</h3>
+           <div class="card" onclick="showPage('gov')">
+               <div class="card" onclick="showPage('science')">
+    <h3>Научная деятельность</h3>
+    <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
+</div>
+    <h3>Молодежное Правительство ЧР</h3>
+    <p>Проекты, молодежные инициативы и официальные мероприятия.</p>
+</div>
+<div class="card" onclick="showPage('poetry')">
+    <h3>Моя поэзия</h3>
+    <p> Авторские стихотворения и литературные работы.</p>
+</div>
+
