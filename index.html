@@ -35,12 +35,8 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-        }
-
-        .header-border {
-            height: 8px;
-            background: repeating-linear-gradient(90deg, var(--accent-color), var(--accent-color) 10px, #b08d46 10px, #b08d46 20px);
-            background-color: var(--accent-color);
+            /* Тонкая непрерывная золотистая линия строго по низу шапки */
+            border-bottom: 2px solid var(--accent-color);
         }
 
         nav {
@@ -263,6 +259,7 @@
             color: #ffffff;
             font-size: 0.9rem;
             margin-top: 80px;
+            border-top: 2px solid var(--accent-color);
         }
     </style>
 </head>
@@ -280,7 +277,6 @@
                 <li><a onclick="showPage('poetry')" id="link-poetry">Моя поэзия</a></li>
             </ul>
         </nav>
-        <div class="header-border"></div>
     </header>
 
     <!-- ГЛАВНАЯ СТРАНИЦА -->
@@ -288,9 +284,12 @@
         <div class="hero">
             <img src="v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg" alt="Хава Асламбековна Шаипова" class="main-photo">
             <h1>Шаипова Хава Асламбековна</h1>
+            <!-- Правильный упорядоченный список регалий с переносами строк -->
             <p class="subtitle">
-                Министр образования и науки Молодежного Правительства Чеченской Республики.<br>
-                Учитель родного (чеченского) языка и литературы. Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ № 9 им. А.М. Цебиева» г. Грозного. Руководитель театрального кружка.
+                Министр образования и науки Молодёжного Правительства Чеченской Республики.<br><br>
+                Учитель чеченского языка и литературы.<br><br>
+                Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ №9 им. А.М. Цебиева» г. Грозного.<br><br>
+                Руководитель театрального кружка.
             </p>
             <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
         </div>
@@ -309,4 +308,9 @@
                 <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
             </div>
             <div class="card" onclick="showPage('gov')">
-                <h3>Молодежное Правительство ЧР</h3>
+                    <!-- МОЛОДЕЖНОЕ ПРАВИТЕЛЬСТВО ЧР (50 СЛОТОВ) -->
+    <div id="page-gov" class="page">
+        <h1>Молодежное Правительство ЧР</h1>
+        <p class="subtitle"> Официальные мероприятия и проекты</p>
+        <div class="slots-grid" id="gov-container"></div>
+    </div>
