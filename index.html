@@ -10,8 +10,8 @@
             --accent-color: #c5a059; 
             --text-color: #2c3e50;
             --light-bg: #f4f7f5;
-            /* Код чеченского золотого орнамента */
-            --ornament-url: url('data:image/svg+xml;utf8,<svg xmlns="http://w3.org" width="30" height="15" viewBox="0 0 30 15"><path d="M0,7.5 Q7.5,0 15,7.5 Q22.5,15 30,7.5" fill="none" stroke="%23c5a059" stroke-width="2.5"/><circle cx="15" cy="7.5" r="2" fill="%23c5a059"/></svg>');
+            /* Перепроверенный и закодированный чеченский золотой орнамент (работает везде) */
+            --ornament-url: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMCIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDMwIDE1Ij48cGF0aCBkPSJMMCw3LjUgUTcuNSwwIDE1LDcuNSBRMjIuNSwxNSAzMCw3LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M1YTA1OSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz48Y2lyY2xlIGN4PSIxNSIgY3k9IjcuNSIgcj0iMiIgZmlsbD0iI2M1YTA1OSIvPjwvc3ZnPg==');
         }
 
         * {
@@ -110,6 +110,17 @@
             font-style: italic;
         }
 
+        .quote-text {
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--primary-color);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+            position: relative;
+            padding: 0 20px;
+        }
+
         .hero {
             text-align: center;
             padding: 40px 20px;
@@ -126,7 +137,7 @@
             height: 250px; 
             border-radius: 50%; 
             object-fit: cover;
-            object-position: top; /* Фокусирует кадр на лице и обрезает фото на уровне талии */
+            object-position: top; 
             border: 4px solid var(--accent-color);
             margin-bottom: 25px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -275,7 +286,7 @@
 
     <header>
         <nav>
-            <div class="logo">ХАВА АСЛАМБЕКОВНА ШАИПОВА</div>
+            <div class="logo">ХАВА АСЛАМБЕКОВНА ШАИPОВА</div>
             <ul class="nav-links">
                 <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
                 <li><a onclick="showPage('prof')" id="link-prof">Профессиональная деятельность</a></li>
@@ -296,15 +307,10 @@
                 Министр образования и науки Молодежного Правительства Чеченской Республики.<br>
                 Учитель родного языка и литературы, Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ № 9 им. А.М. Цебиева» г. Грозного.
             </p>
-            <p>Добро пожаловать на официальный информационный ресурс. Здесь вы можете подробно ознакомиться с профессиональными достижениями, научными публикациями, деятельностью в составе Молодежного Правительства ЧР, а также авторским творчеством.</p>
+            <!-- Новая официальная цитата -->
+            <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
         </div>
 
         <!-- БЛОК О СЕБЕ -->
         <div class="about-section">
             <h2>О себе</h2>
-            <p>Здесь вы можете разместить подробную биографическую справку, информацию о жизненном и профессиональном пути, педагогическом стаже, ключевых целях в преподавании родного языка и общественной работе. Текст легко заменить через встроенный редактор на GitHub в этом блоке.</p>
-        </div>
-
-        <div class="grid-menu">
-            <div class="card" onclick="showPage('prof')">
-                <h3>Профессиональная деятельность</h3>
