@@ -161,14 +161,13 @@
             font-size: 1.6rem;
         }
 
-              /* Аккуратные прямоугольные карточки по центру экрана */
+               /* Идеальная прямоугольная сетка карточек для ПК и телефона */
         .grid-menu {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 20px;
             margin-top: 30px;
             width: 100%;
-            align-items: center; /* Центрирует прямоугольники на ПК */
         }
 
         .card {
@@ -180,13 +179,17 @@
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e2e8f0;
             border-top: 6px solid var(--accent-color); 
-            width: 100%; 
-            max-width: 450px; /* Ограничивает ширину, делая блок красивым прямоугольником на ПК */
-            min-height: 120px; 
+            min-height: 140px; /* Фиксирует высоту, чтобы получился прямоугольник */
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
         }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(11, 70, 44, 0.1);
+        }
+
 
         .card:hover {
             transform: translateY(-3px);
