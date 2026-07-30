@@ -220,7 +220,6 @@
         </ul>
     </nav>
 </header>
-
 <!-- ГЛАВНАЯ СТРАНИЦА -->
 <div id="page-home" class="page active-page">
     <div class="hero">
@@ -239,7 +238,7 @@
         <!-- 1. Карточка О себе -->
         <div class="card" onclick="showPage('about-page')">
             <h3>О себе</h3>
-            <p>Биография, professionalные ценности, жизненный и карьерный путь.</p>
+            <p>Биография, профессиональные ценности, жизненный и карьерный путь.</p>
         </div>
 
         <!-- 2. Профессиональная деятельность -->
@@ -285,18 +284,51 @@
 </div>
 
 <!-- СТРАНИЦА: НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ -->
-    <!-- ИСПРАВЛЕННЫЙ ФУТЕР С АБСОЛЮТНЫМ РАСШИРЕНИЕМ -->
-<footer style="text-align: center; padding: 30px; background: #0b462c; color: #ffffff; font-size: 0.9rem; margin-top: 80px; border-top: 2px solid #c5a059; width: 100%; position: absolute; left: 0; box-sizing: border-box;">
+<div id="page-science" class="page">
+    <div class="about-section">
+        <h2>Научная деятельность</h2>
+        <p>Методические публикации, доклады и научно-исследовательские работы автора.</p>
+        <h3 style="margin-top: 25px; color: var(--primary-color);">Доступные сборники документов:</h3>
+        <ul class="sbornik-list">
+            <li class="sbornik-item">
+                <span>Сборник научно-методических материалов — Часть 1</span>
+                <a href="sbornik1.pdf" target="_blank" class="sbornik-link">Открыть PDF →</a>
+            </li>
+            <li class="sbornik-item">
+                <span>Сборник научно-методических материалов — Часть 2</span>
+                <a href="sbornik2.pdf" target="_blank" class="sbornik-link">Открыть PDF →</a>
+            </li>
+            <li class="sbornik-item">
+                <span>Сборник научно-методических материалов — Часть 3</span>
+                <a href="sbornik3.pdf" target="_blank" class="sbornik-link">Открыть PDF →</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="page-gov" class="page">
+    <div class="about-section">
+        <h2>Молодежное Правительство ЧР</h2>
+        <p>Информация о деятельности в качестве... Республики, реализуемых проектах и инициативах.</p>
+    </div>
+</div>
+
+<div id="page-poetry" class="page">
+    <div class="about-section">
+        <h2>Моя поэзия</h2>
+        <p>Раздел для ваших авторских стихотворений, поэтических заметок и творческих работ.</p>
+    </div>
+</div>
+
+<footer style="text-align: center; padding: 30px; background: #0b462c; color: #ffffff; font-size: 0.9rem; border-top: 2px solid #c5a059; width: 100%; position: absolute; bottom: 0; left: 0; box-sizing: border-box;">
     <p>© 2026 Все права защищены. Официальный сайт</p>
 </footer>
 
 <script>
 function showPage(pageId) {
-    // Скрываем все страницы
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active-page'));
     
-    // Скрываем также главную страницу отдельно
     const homePage = document.getElementById('page-home');
     if (homePage && pageId !== 'home') {
         homePage.classList.remove('active-page');
@@ -304,26 +336,21 @@ function showPage(pageId) {
         homePage.classList.add('active-page');
     }
     
-    // Показываем выбранную страницу
     const selectedPage = document.getElementById('page-' + pageId);
     if(selectedPage && pageId !== 'home') {
         selectedPage.classList.add('active-page');
     }
     
-    // Сбрасываем активность у ссылок в меню
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => link.classList.remove('active'));
     
-    // Подсвечиваем нужную ссылку в меню
     const activeLink = document.getElementById('link-' + pageId);
     if(activeLink) {
         activeLink.classList.add('active');
     }
     
-    // Скроллим наверх страницы при переключении
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 </script>
 </body>
 </html>
-
