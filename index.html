@@ -212,7 +212,7 @@
         <div class="logo">ОФИЦИАЛЬНЫЙ САЙТ</div>
         <ul class="nav-links">
             <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
-            <li><a onclick="showPage('about-page')" id="link-about-page">О себе</a></li>
+            <li><a onclick="showPage('about')" id="link-about">О себе</a></li>
             <li><a onclick="showPage('prof')" id="link-prof">Профессиональная деятельность</a></li>
             <li><a onclick="showPage('science')" id="link-science">Научная деятельность</a></li>
             <li><a onclick="showPage('gov')" id="link-gov">Молодежное Правительство ЧР</a></li>
@@ -220,6 +220,7 @@
         </ul>
     </nav>
 </header>
+
 <!-- ГЛАВНАЯ СТРАНИЦА -->
 <div id="page-home" class="page active-page">
     <div class="hero">
@@ -235,31 +236,26 @@
     </div>
 
     <div class="grid-menu">
-        <!-- 1. Карточка О себе -->
-        <div class="card" onclick="showPage('about-page')">
+        <div class="card" onclick="showPage('about')">
             <h3>О себе</h3>
             <p>Биография, профессиональные ценности, жизненный и карьерный путь.</p>
         </div>
 
-        <!-- 2. Профессиональная деятельность -->
         <div class="card" onclick="showPage('prof')">
             <h3>Профессиональная деятельность</h3>
             <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
         </div>
 
-        <!-- 3. Научная деятельность -->
         <div class="card" onclick="showPage('science')">
             <h3>Научная деятельность</h3>
             <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
         </div>
 
-        <!-- 4. Молодежное Правительство ЧР -->
         <div class="card" onclick="showPage('gov')">
             <h3>Молодежное Правительство ЧР</h3>
             <p>Проекты, молодежные инициативы и официальные мероприятия.</p>
         </div>
 
-        <!-- 5. Моя поэзия -->
         <div class="card" onclick="showPage('poetry')">
             <h3>Моя поэзия</h3>
             <p>Авторские стихотворения и литературные работы.</p>
@@ -268,7 +264,70 @@
 </div>
 
 <!-- СТРАНИЦА: О СЕБЕ -->
-<div id="page-about-page" class="page">
+<div id="page-about" class="page">
+    <div class="about-section">
+        <h2>О себе</h2>
+        <p>Здесь вы можете разместить подробную автобиографию, информацию о жизненном пути и ключевых этапах вашей карьеры.</p>
+    </div>
+</div>
+
+<!-- СТРАНИЦА: ПРОФЕССИОНАЛЬНАЯ ДЕЯТЕЛЬНОСТЬ -->
+<div id="page-prof" class="page">
+    <div class="about-section">
+        <h2>Профессиональная деятельность</h2>
+        <p>Информация о педагогическом стаже, достижениях в школе, работе методического объединения и опыте преподавания.</p>
+    </div>
+</div>
+
+<!-- СТРАНИЦА: НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ -->
+<div id="page-science" class="page">
+    <div class="about-section">
+        <h2>Научная деятельность</h2>
+        <p>Методические публикации, доклады и научно-исследовательские работы автора.</p>
+<!-- ГЛАВНАЯ СТРАНИЦА -->
+<div id="page-home" class="page active-page">
+    <div class="hero">
+        <img src="v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg" alt="Хава Асламбековна Шаипова" class="main-photo">
+        <h1>Шаипова Хава Асламбековна</h1>
+        <p class="subtitle">
+            Министр образования и науки Молодёжного Правительства Чеченской Республики.<br>
+            Учитель чеченского языка и литературы.<br>
+            Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ №9 им. А.М. Цебиева» г. Грозного.<br>
+            Руководитель театрального кружка.
+        </p>
+        <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
+    </div>
+
+    <div class="grid-menu">
+        <div class="card" onclick="showPage('about')">
+            <h3>О себе</h3>
+            <p>Биография, профессиональные ценности, жизненный и карьерный путь.</p>
+        </div>
+
+        <div class="card" onclick="showPage('prof')">
+            <h3>Профессиональная деятельность</h3>
+            <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
+        </div>
+
+        <div class="card" onclick="showPage('science')">
+            <h3>Научная деятельность</h3>
+            <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
+        </div>
+
+        <div class="card" onclick="showPage('gov')">
+            <h3>Молодежное Правительство ЧР</h3>
+            <p>Проекты, молодежные инициативы и официальные мероприятия.</p>
+        </div>
+
+        <div class="card" onclick="showPage('poetry')">
+            <h3>Моя поэзия</h3>
+            <p>Авторские стихотворения и литературные работы.</p>
+        </div>
+    </div>
+</div>
+
+<!-- СТРАНИЦА: О СЕБЕ -->
+<div id="page-about" class="page">
     <div class="about-section">
         <h2>О себе</h2>
         <p>Здесь вы можете разместить подробную автобиографию, информацию о жизненном пути и ключевых этапах вашей карьеры.</p>
@@ -306,22 +365,15 @@
     </div>
 </div>
 
+<!-- СТРАНИЦА: МОЛОДЕЖНОЕ ПРАВИТЕЛЬСТВО ЧР -->
 <div id="page-gov" class="page">
     <div class="about-section">
         <h2>Молодежное Правительство ЧР</h2>
-        <p>Информация о деятельности в качестве... Республики, реализуемых проектах и инициативах.</p>
+        <p>Информация о деятельности в качестве Министра образования и науки Молодежного Правительства Чеченской Республики, реализуемых проектах и инициативах.</p>
     </div>
 </div>
 
-<div id="page-poetry" class="page">
-    <div class="about-section">
-        <!-- СТРАНИЦА: МОЯ ПОЭЗИЯ -->
-<div id="page-poetry" class="page">
-    <div class="about-section">
-  <!-- СТРАНИЦА: МОЯ ПОЭЗИЯ -->
-<div id="page-poetry" class="page">
-    <div class="about-section">
-     <!-- СТРАНИЦА: МОЯ ПОЭЗИЯ -->
+<!-- СТРАНИЦА: МОЯ ПОЭЗИЯ -->
 <div id="page-poetry" class="page">
     <div class="about-section">
         <h2>Моя поэзия</h2>
@@ -355,8 +407,10 @@
 <script>
 function showPage(pageId) {
     const pages = document.querySelectorAll('.page');
-    pages.forEach(page => page.classList.remove('active-page'));
-    
+    pages.forEach(page => {
+        page.classList.remove('active-page');
+    });
+
     const homePage = document.getElementById('page-home');
     if (homePage && pageId !== 'home') {
         homePage.classList.remove('active-page');
@@ -365,18 +419,20 @@ function showPage(pageId) {
     }
     
     const selectedPage = document.getElementById('page-' + pageId);
-    if(selectedPage && pageId !== 'home') {
+    if (selectedPage && pageId !== 'home') {
         selectedPage.classList.add('active-page');
     }
-    
+
     const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => link.classList.remove('active'));
-    
+    links.forEach(link => {
+        link.classList.remove('active');
+    });
+
     const activeLink = document.getElementById('link-' + pageId);
-    if(activeLink) {
+    if (activeLink) {
         activeLink.classList.add('active');
     }
-    
+
     window.scrollTo({top: 0, behavior: 'smooth'});
 }
 </script>
