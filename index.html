@@ -5,32 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Официальный сайт | Шаипова Хава Асламбековна</title>
     <meta name="yandex-verification" content="63e220bd88f21cb6" />
-
-    <!-- Настройки для поисковиков Яндекс и Google (SEO) -->
     <meta name="description" content="Официальный сайт Шаиповой Хавы Асламбековны — Министра образования и науки Молодежного Правительства Чеченской Республики, руководителя методобъединения и учителя чеченского языка.">
-    <meta name="keywords" content="Шаипова Хава Асламбековна, Хава Шаипова, Молодежное Правительство ЧР, министр образования, СОШ 9 Грозный, учитель чеченского языка, Шаипова Грозный, руководитель театрального кружка">
-    
+    <meta name="keywords" content="Шаипова Хава Асламбековна, Хава Шаипова, Молодежное Правительство ЧР, miniстр образования, СОШ 9 Грозный, учитель чеченского языка, Шаипова Грозный, руководитель театрального кружка">
     <style>
         :root {
-            --primary-color: #0b462c; 
-            --accent-color: #c5a059; 
+            --primary-color: #0b462c;
+            --accent-color: #c5a059;
             --text-color: #2c3e50;
             --light-bg: #f4f7f5;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
             color: var(--text-color);
             line-height: 1.6;
             background-color: #ffffff;
+            position: relative;
+            min-height: 100vh;
+            padding-bottom: 120px;
         }
-
         header {
             background-color: var(--primary-color);
             position: sticky;
@@ -38,7 +35,6 @@
             z-index: 1000;
             border-bottom: 2px solid var(--accent-color);
         }
-
         nav {
             max-width: 1200px;
             margin: 0 auto;
@@ -49,7 +45,6 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-
         .logo {
             color: #ffffff;
             font-size: 1.1rem;
@@ -57,14 +52,12 @@
             letter-spacing: 1px;
             white-space: nowrap;
         }
-
         .nav-links {
             display: flex;
             list-style: none;
             gap: 15px;
             flex-wrap: wrap;
         }
-
         .nav-links a {
             color: #e0e0e0;
             text-decoration: none;
@@ -74,11 +67,9 @@
             cursor: pointer;
             white-space: nowrap;
         }
-
         .nav-links a:hover, .nav-links a.active {
             color: var(--accent-color);
         }
-
         .page {
             display: none;
             max-width: 1100px;
@@ -86,16 +77,13 @@
             padding: 0 20px;
             animation: fadeIn 0.5s ease;
         }
-
         .page.active-page {
             display: block;
         }
-
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         h1 {
             color: var(--primary-color);
             font-size: 2.2rem;
@@ -103,14 +91,12 @@
             border-bottom: 2px solid var(--accent-color);
             padding-bottom: 10px;
         }
-
         .subtitle {
             color: #7f8c8d;
             font-size: 1.1rem;
             margin-bottom: 25px;
             font-style: italic;
         }
-
         .quote-text {
             font-style: italic;
             font-size: 1.15rem;
@@ -122,7 +108,6 @@
             padding: 0 20px;
             font-weight: 500;
         }
-
         .hero {
             text-align: center;
             padding: 40px 20px;
@@ -133,18 +118,16 @@
             flex-direction: column;
             align-items: center;
         }
-
         .main-photo {
             width: 250px;
-            height: 250px; 
-            border-radius: 50%; 
+            height: 250px;
+            border-radius: 50%;
             object-fit: cover;
-            object-position: top; 
+            object-position: top;
             border: 4px solid var(--accent-color);
             margin-bottom: 25px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
-
         .about-section {
             background: #ffffff;
             padding: 35px;
@@ -155,14 +138,11 @@
             position: relative;
             border-top: 6px solid var(--accent-color);
         }
-
         .about-section h2 {
             color: var(--primary-color);
             margin-bottom: 15px;
             font-size: 1.6rem;
         }
-
-               /* Идеальная прямоугольная сетка карточек для ПК и телефона */
         .grid-menu {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -170,7 +150,6 @@
             margin-top: 30px;
             width: 100%;
         }
-
         .card {
             background: #ffffff;
             padding: 25px;
@@ -179,185 +158,132 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
             border: 1px solid #e2e8f0;
-            border-top: 6px solid var(--accent-color); 
-            min-height: 140px; /* Фиксирует высоту, чтобы получился прямоугольник */
+            border-top: 6px solid var(--accent-color);
+            min-height: 140px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
-
         .card:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(11, 70, 44, 0.1);
         }
-
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(11, 70, 44, 0.1);
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(11, 70, 44, 0.1);
-        }
-
-        }
-
-        }
-
-        .card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 6px 20px rgba(11, 70, 44, 0.1);
-        }
-
         .card h3 {
             color: var(--primary-color);
             margin-bottom: 8px;
             font-size: 1.25rem;
             font-weight: bold;
         }
-
         .card p {
             font-size: 1rem;
             color: #555555;
             line-height: 1.5;
         }
-
-        .slots-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+        .sbornik-list {
+            list-style: none;
+            padding: 0;
             margin-top: 20px;
         }
-
-        .slot-card {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
-            transition: transform 0.3s;
-            position: relative;
-        }
-
-        .slot-card:hover {
-            transform: translateY(-3px);
-        }
-
-        .slot-img {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            background-color: #eaedf0;
-        }
-
-        .slot-ornament {
-            height: 6px;
-            background-color: var(--accent-color);
-        }
-
-        .slot-content {
-            padding: 20px;
-        }
-
-        .poem-block {
+        .sbornik-item {
             background: var(--light-bg);
-            padding: 30px;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-radius: 6px;
             border-left: 4px solid var(--accent-color);
-            border-radius: 0 8px 8px 0;
-            font-style: italic;
-            white-space: pre-line;
-            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .date {
-            font-size: 0.85rem;
-            color: #94a3b8;
-            margin-bottom: 5px;
+        .sbornik-link {
+            color: var(--primary-color);
+            text-decoration: none;
             font-weight: bold;
+            transition: color 0.2s;
         }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: var(--primary-color);
-            color: #ffffff;
-            font-size: 0.9rem;
-            margin-top: 80px;
-            border-top: 2px solid var(--accent-color);
+        .sbornik-link:hover {
+            color: var(--accent-color);
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">ОФИЦИАЛЬНЫЙ САЙТ</div>
-            <ul class="nav-links">
-                <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
-                <li><a onclick="showPage('about-page')" id="link-about-page">О себе</a></li>
-                <li><a onclick="showPage('prof')" id="link-prof">Профессиональная деятельность</a></li>
-                <li><a onclick="showPage('science')" id="link-science">Научная деятельность</a></li>
-                <li><a onclick="showPage('gov')" id="link-gov">Молодежное Правительство ЧР</a></li>
-                <li><a onclick="showPage('poetry')" id="link-poetry">Моя поэзия</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div class="logo">ОФИЦИАЛЬНЫЙ САЙТ</div>
+        <ul class="nav-links">
+            <li><a onclick="showPage('home')" id="link-home" class="active">Главная</a></li>
+            <li><a onclick="showPage('about-page')" id="link-about-page">О себе</a></li>
+            <li><a onclick="showPage('prof')" id="link-prof">Профессиональная деятельность</a></li>
+            <li><a onclick="showPage('science')" id="link-science">Научная деятельность</a></li>
+            <li><a onclick="showPage('gov')" id="link-gov">Молодежное Правительство ЧР</a></li>
+            <li><a onclick="showPage('poetry')" id="link-poetry">Моя поэзия</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- ГЛАВНАЯ СТРАНИЦА -->
-    <div id="page-home" class="page active-page">
-        <div class="hero">
-            <img src="v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg" alt="Хава Асламбековна Шаипова" class="main-photo">
-            <h1>Шаипова Хава Асламбековна</h1>
-            <p class="subtitle">
-                Министр образования и науки Молодёжного Правительства Чеченской Республики.<br>
-                Учитель чеченского языка и литературы.<br>
-                Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ №9 им. А.М. Цебиева» г. Грозного.<br>
-                Руководитель театрального кружка.
-            </p>
-            <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
-        </div>
-
-        <div class="grid-menu">
-            <!-- 1. Карточка О себе -->
-            <div class="card" onclick="showPage('about-page')">
-                <h3>О себе</h3>
-                <p>Биография, профессиональные ценности, жизненный и карьерный путь.</p>
-            </div>
-            <!-- 2. Профессиональная деятельность -->
-            <div class="card" onclick="showPage('prof')">
-                <h3>Профессиональная деятельность</h3>
-                <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
-            </div>
-            <!-- 3. Научная деятельность --> 
-<div class="card"> 
-   <h3>Научная деятельность</h3> 
-   <p>Исследования, статьи, доклады и научно-методические публикации автора.</p> 
-   <hr style="border: 0; border-top: 1px solid #ccc; margin: 10px 0;">
-   <p><strong>Открыть сборники документов:</strong></p>
-   <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
-      <li style="margin: 5px 0;"><a href="sbornik1.pdf" target="_blank" style="text-decoration: none; color: #007bff; font-weight: bold;">Скачать Сборник 1</a></li>
-      <li style="margin: 5px 0;"><a href="sbornik2.pdf" target="_blank" style="text-decoration: none; color: #007bff; font-weight: bold;">Скачать Сборник 2</a></li>
-      <li style="margin: 5px 0;"><a href="sbornik3.pdf" target="_blank" style="text-decoration: none; color: #007bff; font-weight: bold;">Скачать Сборник 3</a></li>
-   </ul>
-</div>
-
-    <h3>Молодежное Правительство ЧР</h3>
-    <p>Проекты, молодежные инициативы и официальные мероприятия.</p>
-</div>
-            <div class="card" onclick="showPage('poetry')">
-    <h3>Моя поэзия</h3>
-    <p> Авторские стихотворения и литературные работы.</p>
-</div>
-            <!-- КОНЕЦ СТРАНИЦЫ ПОЭЗИИ -->
+<!-- ГЛАВНАЯ СТРАНИЦА -->
+<div id="page-home" class="page active-page">
+    <div class="hero">
+        <img src="v2qrVEaQ1L2FF4FAMupYv_a-qhmX70PHiIvbn3NMu4h2svKVR7IADTDd5GiUUbhfmp56r2NvayfAG2exa4IS5ZJG.jpg" alt="Хава Асламбековна Шаипова" class="main-photo">
+        <h1>Шаипова Хава Асламбековна</h1>
+        <p class="subtitle">
+            Министр образования и науки Молодёжного Правительства Чеченской Республики.<br>
+            Учитель чеченского языка и литературы.<br>
+            Руководитель методического объединения учителей чеченского языка и литературы МБОУ «СОШ №9 им. А.М. Цебиева» г. Грозного.<br>
+            Руководитель театрального кружка.
+        </p>
+        <p class="quote-text">«Пока я вижу, что мои уроки находят отклик в сердцах подрастающего поколения, я буду продолжать свое дело, открывая детям мир чеченской литературы и языка»</p>
     </div>
 
-    <!-- ИСПРАВЛЕННЫЙ ФУТЕР С АБСОЛЮТНЫМ РАСШИРЕНИЕМ -->
-    <footer style="text-align: center; padding: 30px; background: #0b462c; color: #ffffff; font-size: 0.9rem; margin-top: 80px; border-top: 2px solid #c5a059; width: 100%; position: absolute; left: 0; box-sizing: border-box;">
-        <p>© 2026 Все права защищены. Официальный сайт</p>
-    </footer>
+    <div class="grid-menu">
+        <!-- 1. Карточка О себе -->
+        <div class="card" onclick="showPage('about-page')">
+            <h3>О себе</h3>
+            <p>Биография, профессиональные ценности, жизненный и карьерный путь.</p>
+        </div>
 
-    <script>
+        <!-- 2. Профессиональная деятельность -->
+        <div class="card" onclick="showPage('prof')">
+            <h3>Профессиональная деятельность</h3>
+            <p>Педагогический путь, методические достижения и опыт преподавания чеченского языка.</p>
+        </div>
 
+        <!-- 3. Научная деятельность -->
+        <div class="card" onclick="showPage('science')">
+            <h3>Научная деятельность</h3>
+            <p>Исследования, статьи, доклады и научно-методические публикации автора.</p>
+        </div>
 
+        <!-- 4. Молодежное Правительство ЧР -->
+        <div class="card" onclick="showPage('gov')">
+            <h3>Молодежное Правительство ЧР</h3>
+            <p>Проекты, молодежные инициативы и официальные мероприятия.</p>
+        </div>
+
+        <!-- 5. Моя поэзия -->
+        <div class="card" onclick="showPage('poetry')">
+            <h3>Моя поэзия</h3>
+            <p>Авторские стихотворения и литературные работы.</p>
+        </div>
+    </div>
+</div>
+
+<!-- СТРАНИЦА: О СЕБЕ -->
+<div id="page-about-page" class="page">
+    <div class="about-section">
+        <h2>О себе</h2>
+        <p>Здесь вы можете разместить подробную автобиографию, информацию о жизненном пути и ключевых этапах вашей карьеры.</p>
+    </div>
+</div>
+
+<!-- СТРАНИЦА: ПРОФЕССИОНАЛЬНАЯ ДЕЯТЕЛЬНОСТЬ -->
+<div id="page-prof" class="page">
+    <div class="about-section">
+        <h2>Профессиональная деятельность</h2>
+        <p>Информация о педагогическом стаже, достижениях в школе, работе методического объединения и опыте преподавания.</p>
+    </div>
+</div>
+
+<!-- СТРАНИЦА: НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ (СЮДА ПЕРЕНЕСЕНЫ СБОРНИКИ) -->
+
+   
