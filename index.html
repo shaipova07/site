@@ -6,7 +6,7 @@
     <title>Официальный сайт | Шаипова Хава Асламбековна</title>
     <meta name="yandex-verification" content="63e220bd88f21cb6" />
     <meta name="description" content="Официальный сайт Шаиповой Хавы Асламбековны — Министра образования и науки Молодежного Правительства Чеченской Республики, руководителя методобъединения и учителя чеченского языка.">
-    <meta name="keywords" content="Шаипова Хава Асламбековна, Хава Шаипова, Молодежное Правительство ЧР, miniстр образования, СОШ 9 Грозный, учитель чеченского языка, Шаипова Грозный, руководитель театрального кружка">
+    <meta name="keywords" content="Шаипова Хава Асламбековна, Хава Шаипова, Молодежное Правительство ЧР, министр образования, СОШ 9 Грозный, учитель чеченского языка, Шаипова Грозный, руководитель театрального кружка">
     <style>
         :root {
             --primary-color: #0b462c;
@@ -239,7 +239,7 @@
         <!-- 1. Карточка О себе -->
         <div class="card" onclick="showPage('about-page')">
             <h3>О себе</h3>
-            <p>Биография, профессиональные ценности, жизненный и карьерный путь.</p>
+            <p>Биография, professionalные ценности, жизненный и карьерный путь.</p>
         </div>
 
         <!-- 2. Профессиональная деятельность -->
@@ -284,6 +284,46 @@
     </div>
 </div>
 
-<!-- СТРАНИЦА: НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ (СЮДА ПЕРЕНЕСЕНЫ СБОРНИКИ) -->
+<!-- СТРАНИЦА: НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ -->
+    <!-- ИСПРАВЛЕННЫЙ ФУТЕР С АБСОЛЮТНЫМ РАСШИРЕНИЕМ -->
+<footer style="text-align: center; padding: 30px; background: #0b462c; color: #ffffff; font-size: 0.9rem; margin-top: 80px; border-top: 2px solid #c5a059; width: 100%; position: absolute; left: 0; box-sizing: border-box;">
+    <p>© 2026 Все права защищены. Официальный сайт</p>
+</footer>
 
-   
+<script>
+function showPage(pageId) {
+    // Скрываем все страницы
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active-page'));
+    
+    // Скрываем также главную страницу отдельно
+    const homePage = document.getElementById('page-home');
+    if (homePage && pageId !== 'home') {
+        homePage.classList.remove('active-page');
+    } else if (homePage && pageId === 'home') {
+        homePage.classList.add('active-page');
+    }
+    
+    // Показываем выбранную страницу
+    const selectedPage = document.getElementById('page-' + pageId);
+    if(selectedPage && pageId !== 'home') {
+        selectedPage.classList.add('active-page');
+    }
+    
+    // Сбрасываем активность у ссылок в меню
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => link.classList.remove('active'));
+    
+    // Подсвечиваем нужную ссылку в меню
+    const activeLink = document.getElementById('link-' + pageId);
+    if(activeLink) {
+        activeLink.classList.add('active');
+    }
+    
+    // Скроллим наверх страницы при переключении
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+</body>
+</html>
+
